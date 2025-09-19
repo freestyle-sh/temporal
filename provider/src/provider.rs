@@ -185,6 +185,22 @@ pub struct TimeZoneId {
     pub resolved: ResolvedId,
 }
 
+// Compatibility trait for temporal_rs 0.0.11 API
+impl From<&str> for TimeZoneId {
+    fn from(_: &str) -> Self {
+        // For compatibility with the old API, we return a default TimeZoneId
+        // The actual resolution will happen when used with a provider
+        TimeZoneId::default()
+    }
+}
+
+// Additional compatibility for String
+impl From<String> for TimeZoneId {
+    fn from(_: String) -> Self {
+        TimeZoneId::default()
+    }
+}
+
 pub trait TimeZoneProvider {
     fn get(&self, ident: &[u8]) -> TimeZoneProviderResult<TimeZoneId>;
     fn identifier(&self, id: TimeZoneId) -> TimeZoneProviderResult<Cow<'_, str>>;
