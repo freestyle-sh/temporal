@@ -1,9 +1,8 @@
 [package]
 name = "timezone_provider"
-version = "0.0.11"
 description = "Time zone data providers"
+version = "0.0.11"
 edition.workspace = true
-version.workspace = true
 rust-version.workspace = true
 authors.workspace = true
 license.workspace = true
@@ -73,4 +72,3 @@ serde = { version = "1.0.219", features = ["derive"], optional = true }
 databake = { version = "0.2.0", features = ["derive"], optional = true }
 yoke = { version = "0.8.0", features = ["derive"], optional = true }
 serde_json = { version = "1.0.143", optional = true }
-
