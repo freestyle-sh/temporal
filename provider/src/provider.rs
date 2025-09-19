@@ -9,6 +9,7 @@ use crate::utils;
 use crate::CompiledNormalizer;
 use crate::{epoch_nanoseconds::EpochNanoseconds, TimeZoneProviderError};
 use alloc::borrow::Cow;
+use alloc::string::String;
 
 pub(crate) type TimeZoneProviderResult<T> = Result<T, TimeZoneProviderError>;
 
