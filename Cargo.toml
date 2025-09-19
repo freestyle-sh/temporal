@@ -29,9 +29,9 @@ exclude = [
 
 [workspace.dependencies]
 # Self
-temporal_rs = { version = "~0.0.16", path = ".", default-features = false }
-timezone_provider = { version = "~0.0.16", path = "./provider" }
-zoneinfo_rs = { version = "~0.0.16", path = "./zoneinfo" }
+temporal_rs = { version = "~0.0.11", path = ".", default-features = false }
+timezone_provider = { version = "~0.0.11", path = "./provider" }
+zoneinfo_rs = { version = "~0.0.11", path = "./zoneinfo" }
 
 # Dependencies
 tinystr = "0.8.1"

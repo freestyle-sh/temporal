@@ -1,8 +1,8 @@
 [package]
 name = "zoneinfo_rs"
 description = "Zoneinfo parser and compiler"
+version = "0.0.11"
 edition.workspace = true
-version.workspace = true
 rust-version.workspace = true
 authors.workspace = true
 license.workspace = true
