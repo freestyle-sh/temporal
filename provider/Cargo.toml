@@ -1,5 +1,6 @@
 [package]
 name = "timezone_provider"
+version = "0.0.11"
 description = "Time zone data providers"
 edition.workspace = true
 version.workspace = true

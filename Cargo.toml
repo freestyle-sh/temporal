@@ -11,7 +11,7 @@ members = [
 
 [workspace.package]
 edition = "2021"
-version = "0.0.16"
+version = "0.0.11"
 rust-version = "1.82.0"
 authors = ["boa-dev"]
 license = "MIT OR Apache-2.0"
@@ -60,7 +60,7 @@ name = "temporal_rs"
 keywords = ["date", "time", "calendar", "timezone", "duration"]
 categories = ["date-and-time", "internationalization"]
 description = "Temporal in Rust is an implementation of the TC39 Temporal Builtin Proposal in Rust."
-version.workspace = true
+version = "0.0.11"
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
