@@ -37,7 +37,7 @@ const NANOSECONDS_PER_HOUR: i128 = 60 * NANOSECONDS_PER_MINUTE;
 
 /// A Normalized `TimeDuration` that represents the current `TimeDuration` in nanoseconds.
 #[derive(Debug, Clone, Copy, Default, PartialEq, PartialOrd, Eq, Ord)]
-pub(crate) struct TimeDuration(pub(crate) i128);
+pub struct TimeDuration(pub(crate) i128);
 
 impl TimeDuration {
     /// Creates a `TimeDuration` from signed integer components.
