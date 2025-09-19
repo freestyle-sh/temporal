@@ -337,6 +337,10 @@ pub mod duration {
     pub use crate::builtins::DateDuration;
 }
 
+// Compatibility re-exports for temporal_rs 0.0.11 API
+pub use crate::builtins::core::duration::normalized::TimeDuration;
+pub use crate::builtins::DateDuration;
+
 /// Calendar field records
 pub mod fields {
     pub use crate::builtins::{

@@ -625,9 +625,13 @@ pub enum Overflow {
     /// Constrain option
     #[default]
     Constrain,
-    /// Constrain option
+    /// Reject option
     Reject,
 }
+
+// Compatibility aliases for temporal_rs 0.0.11 API
+pub type ArithmeticOverflow = Overflow;
+pub type DurationOverflow = Overflow;
 
 /// A parsing error for `ArithemeticOverflow`
 #[derive(Debug, Clone, Copy)]

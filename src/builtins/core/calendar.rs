@@ -6,6 +6,7 @@
 use crate::{
     builtins::core::{
         duration::DateDuration, Duration, PlainDate, PlainDateTime, PlainMonthDay, PlainYearMonth,
+        PartialDate, PartialYearMonth,
     },
     iso::IsoDate,
     options::{Overflow, Unit},
@@ -533,6 +534,19 @@ impl Calendar {
 }
 
 impl Calendar {
+    // Compatibility methods for temporal_rs 0.0.11 API
+    pub fn date_from_partial(&self, partial: PartialDate, overflow: Overflow) -> TemporalResult<PlainDate> {
+        PlainDate::from_partial(partial, Some(overflow))
+    }
+
+    pub fn month_day_from_partial(&self, partial: PartialDate, overflow: Overflow) -> TemporalResult<PlainMonthDay> {
+        PlainMonthDay::from_partial(partial, Some(overflow))
+    }
+
+    pub fn year_month_from_partial(&self, partial: PartialYearMonth, overflow: Overflow) -> TemporalResult<PlainYearMonth> {
+        PlainYearMonth::from_partial(partial, Some(overflow))
+    }
+
     pub(crate) fn get_era_info(&self, era_alias: &TinyAsciiStr<19>) -> Option<EraInfo> {
         match self.0 .0.kind() {
             AnyCalendarKind::Buddhist if *era_alias == tinystr!(19, "be") => {
